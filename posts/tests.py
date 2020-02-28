@@ -19,10 +19,12 @@ class PostPageViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_post_page_by_name(self):
+        before()
         response = self.client.get(reverse('posts'))
         self.assertEqual(response.status_code, 200)
 
     def test_post_page_correct_template(self):
+        before()
         response = self.client.get(reverse('posts'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'post.html')
