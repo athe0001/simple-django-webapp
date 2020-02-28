@@ -1,0 +1,13 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<h1>Posts</h1>
+
+<ul>
+    {% for post in all_posts_list %}
+        <li>
+            {{ post }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
