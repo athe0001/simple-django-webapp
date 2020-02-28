@@ -3,6 +3,9 @@ python:
   - 3.7
 env:
   - DJANGO=3.0.3
+install:
+  - pip install django==$DJANGO --quiet
+
 script:
   - export PYTHONPATH="$(pwd)"
   - python manage.py test
