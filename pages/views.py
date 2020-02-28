@@ -6,3 +6,6 @@ from django.views.generic import TemplateView
 
 class HelloWorldPageView(TemplateView):
     template_name = 'hello_world.html'
+
+class AboutPageView(TemplateView):
+    template_name = 'about.html'
